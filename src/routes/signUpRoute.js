@@ -38,11 +38,11 @@ export const signUpRoute = {
     try {
       await sendEmail({
         to: email,
-        from: "farhadibehnam733@gmail.com",
+        from: process.env.SENDER_EMAIL,
         subject: "Please verify your email",
         text: `
                     Thanks for signing up! To verify your email, click here:
-                    http://localhost:3000/verify-email/${verificationString}
+                    https://reactauth.onrender.com/verify-email/${verificationString}
                 `,
       });
     } catch (e) {

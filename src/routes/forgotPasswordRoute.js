@@ -18,11 +18,11 @@ export const forgotPasswordRoute = {
       try {
         await sendEmail({
           to: email,
-          from: "farhadibehnam733@gmail.com",
+          from: process.env.SENDER_EMAIL,
           subject: "Password Reset",
           text: `
                         To reset your password, click this link:
-                        http://localhost:3000/reset-password/${passwordResetCode}
+                        https://reactauth.onrender.com/reset-password/${passwordResetCode}
                     `,
         });
       } catch (e) {

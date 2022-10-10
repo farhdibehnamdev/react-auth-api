@@ -6,8 +6,8 @@ export const testEmailRoute = {
   handler: async (req, res) => {
     try {
       await sendEmail({
-        to: "dlmart2030@gmail.com",
-        from: "farhadibehnam733@gmail.com",
+        to: process.env.RECIVER_TEST_EMAIL,
+        from: process.env.SENDER_EMAIL,
         subject: "Does this work?",
         text: "If you're reading this... yes!",
       });

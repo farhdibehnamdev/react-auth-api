@@ -16,13 +16,10 @@ export const sendEmail = ({ to, from, subject, text, html }) => {
       email: to,
     },
   ];
-  tranEmailApi
-    .sendTransacEmail({
-      sender,
-      to: receivers,
-      subject: subject,
-      textContent: text,
-    })
-    .then(console.log)
-    .catch(console.log);
+  tranEmailApi.sendTransacEmail({
+    sender,
+    to: receivers,
+    subject: subject,
+    textContent: text,
+  });
 };

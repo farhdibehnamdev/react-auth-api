@@ -21,8 +21,8 @@ export const signUpRoute = {
     const verificationString = uuid();
 
     const startingInfo = {
-      hairColor: "",
-      favoriteFood: "",
+      firstName: "",
+      lastName: "",
       bio: "",
     };
 
@@ -62,7 +62,6 @@ export const signUpRoute = {
       },
       (err, token) => {
         if (err) {
-          console.log("ddd :::", err.message);
           return res.status(500).send(err.message);
         }
         res.status(200).json({ token });

@@ -1,11 +1,11 @@
 import express from "express";
 import { routes } from "./routes";
-import { initializeDbConnection } from "./db";
-
+import { initializeDbConnection } from "./db.js";
+import cors from "cors";
 const PORT = process.env.PORT || 8080;
 
 const app = express();
-const cors = require("cors");
+// const cors = require("cors");
 app.use(
   cors({
     origin: "https://reactauth.onrender.com",

@@ -1,6 +1,8 @@
-require("dotenv").config();
-
-var SibApiV3Sdk = require("sib-api-v3-sdk");
+// require("dotenv").config();
+import dotenv from "dotenv";
+import SibApiV3Sdk from "sib-api-v3-sdk";
+dotenv.config({});
+// var SibApiV3Sdk = require("sib-api-v3-sdk");
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 var apiKey = defaultClient.authentications["api-key"];
